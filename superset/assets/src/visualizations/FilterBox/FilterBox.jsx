@@ -202,7 +202,7 @@ class FilterBox extends React.Component {
         <div key={key} className="m-b-5">
           {label}
           <OnPasteSelect
-            placeholder={t('Select [%s]', label)}
+            placeholder={t('Any')}
             key={key}
             multi
             value={selectedValues[key]}

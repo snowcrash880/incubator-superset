@@ -192,7 +192,7 @@ if (!isDevMode) {
   config.optimization.minimizer = [
     new TerserPlugin({
       cache: true,
-      parallel: true,
+      parallel: false,
       extractComments: true,
     }),
   ];

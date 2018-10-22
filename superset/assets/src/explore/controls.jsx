@@ -57,6 +57,7 @@ const D3_FORMAT_DOCS = 'D3 format syntax: https://github.com/d3/d3-format';
 
 // input choices & options
 const D3_FORMAT_OPTIONS = [
+  ['.d', '.d (12345.432 => 12345)'],
   ['.1s', '.1s (12345.432 => 10k)'],
   ['.3s', '.3s (12345.432 => 12.3k)'],
   [',.1%', ',.1% (12345.432 => 1,234,543.2%)'],
@@ -557,6 +558,7 @@ export const controls = {
       'Brazil',
       'China',
       'Egypt',
+      'Europe',
       'France',
       'Germany',
       'India',
@@ -574,6 +576,7 @@ export const controls = {
       'Ukraine',
       'Usa',
       'Zambia',
+      'World',
     ].map(s => [s, s]),
     description: t('The name of country that Superset should display'),
   },
