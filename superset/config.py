@@ -275,8 +275,8 @@ ROLLOVER = 'midnight'
 INTERVAL = 1
 BACKUP_COUNT = 30
 
-# Set this API key to enable Mapbox visualizations
-MAPBOX_API_KEY = os.environ.get('MAPBOX_API_KEY', '')
+# Set this API ky to enable Mapbox visualizations
+MAPBOX_API_KEY = "pk.eyJ1IjoiYXJha25lIiwiYSI6ImNqOTVwMGR5MDAxYWEyd251MWxuY3ozdDMifQ.UhKlfLkcTyyxs-GXixSAZA"
 
 # Maximum number of rows returned from a database
 # in async mode, no more than SQL_MAX_ROW will be returned and stored

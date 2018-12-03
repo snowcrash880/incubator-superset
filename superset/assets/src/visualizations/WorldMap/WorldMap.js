@@ -1,6 +1,6 @@
 import d3 from 'd3';
 import PropTypes from 'prop-types';
-import Datamap from 'datamaps/dist/datamaps.world.min';
+import Datamap from 'datamaps/dist/datamaps.world';
 import './WorldMap.css';
 
 const propTypes = {
@@ -17,7 +17,7 @@ const propTypes = {
   showBubbles: PropTypes.bool,
 };
 
-const formatter = d3.format('.3s');
+const formatter = d3.format('.3d');
 
 function WorldMap(element, props) {
   const {
@@ -44,7 +44,7 @@ function WorldMap(element, props) {
 
   const colorScale = d3.scale.linear()
     .domain([ext[0], ext[1]])
-    .range(['#FFF', 'black']);
+    .range(['#b9b5dd', '#003399']);
 
   const processedData = filteredData.map(d => ({
     ...d,
@@ -57,11 +57,26 @@ function WorldMap(element, props) {
     mapData[d.country] = d;
   });
 
+  // Get coordinates of the first entry
+  // (Query is in descendent order respect to metric)
+  const firstLat = data[0].latitude;
+  const firstLgt = data[0].longitude;
+
   const map = new Datamap({
     element,
+    setProjection: function(element){
+		var projection = d3.geo.mercator()
+			.center([firstLgt, firstLat])
+			.scale(300)
+			.translate([element.offsetWidth / 2, element.offsetHeight /2]);
+		var path = d3.geo.path()
+			.projection(projection);
+		
+		return {path: path, projection : projection};
+	},
     data: processedData,
     fills: {
-      defaultFill: '#ddd',
+      defaultFill: '#b4b4b4',
     },
     geographyConfig: {
       popupOnHover: true,
@@ -69,7 +84,7 @@ function WorldMap(element, props) {
       borderWidth: 1,
       borderColor: '#fff',
       highlightBorderColor: '#fff',
-      highlightFillColor: '#005a63',
+      highlightFillColor: '#141633',
       highlightBorderWidth: 1,
       popupTemplate: (geo, d) => (
         `<div class="hoverinfo"><strong>${d.name}</strong><br>${formatter(d.m1)}</div>`

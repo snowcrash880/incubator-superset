@@ -219,7 +219,7 @@ class FilterBox extends React.Component {
               return { value: opt.id, label: opt.id, style };
             })}
             onChange={(...args) => { this.changeFilter(key, ...args); }}
-            selectComponent={Creatable}
+			selectComponent={Creatable}
             selectWrap={VirtualizedSelect}
             optionRenderer={VirtualizedRendererWrap(opt => opt.label)}
           />

@@ -56,6 +56,7 @@ const parentMaxDepthLookup = {
     [CHART_TYPE]: depthFour,
     [MARKDOWN_TYPE]: depthFour,
     [COLUMN_TYPE]: depthFour,
+    [TABS_TYPE]:depthFour,
   },
 
   [TABS_TYPE]: {
@@ -78,6 +79,7 @@ const parentMaxDepthLookup = {
     [MARKDOWN_TYPE]: depthFive,
     [ROW_TYPE]: depthThree,
     [DIVIDER_TYPE]: depthThree,
+    [TABS_TYPE]:depthThree,
   },
 
   // these have no valid children
