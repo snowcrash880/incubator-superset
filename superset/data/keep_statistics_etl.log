@@ -1,0 +1,17 @@
+2018-12-04 15:14:23,206 <module> : INFO : Start elaborating database
+2018-12-04 15:14:23,207 <module> : INFO : Create SQL engines
+2018-12-04 15:15:25,270 <module> : INFO : Start elaborating database
+2018-12-04 15:15:25,271 <module> : INFO : Create SQL engines
+2018-12-04 15:16:42,263 <module> : INFO : Start elaborating database
+2018-12-04 15:16:42,263 <module> : INFO : Create SQL engines
+2018-12-04 15:16:56,274 <module> : INFO : Start elaboration
+2018-12-04 15:17:45,055 <module> : INFO : Commit to superset_master
+2018-12-04 15:31:56,224 <module> : INFO : Commit to superset_master
+2018-12-04 15:35:56,154 <module> : INFO : Start elaborating database
+2018-12-04 15:35:56,154 <module> : INFO : Create SQL engines
+2018-12-04 15:36:10,618 <module> : INFO : Start elaboration
+2018-12-04 15:36:31,750 <module> : INFO : Start elaborating database
+2018-12-04 15:36:31,750 <module> : INFO : Create SQL engines
+2018-12-04 15:36:48,582 <module> : INFO : Start elaboration
+2018-12-04 15:36:58,629 <module> : INFO : Commit to superset_master
+2018-12-04 15:40:21,721 <module> : INFO : Done!
