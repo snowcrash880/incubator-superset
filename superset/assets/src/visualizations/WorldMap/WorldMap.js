@@ -1,7 +1,6 @@
 import d3 from 'd3';
 import PropTypes from 'prop-types';
-import Datamap from 'datamaps/dist/datamaps.world';
-import './WorldMap.css';
+import Datamap from 'datamaps/dist/datamaps.world'
 
 const propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
@@ -61,6 +60,7 @@ function WorldMap(element, props) {
   // (Query is in descendent order respect to metric)
   const firstLat = data[0].latitude;
   const firstLgt = data[0].longitude;
+
 
   const map = new Datamap({
     element,
